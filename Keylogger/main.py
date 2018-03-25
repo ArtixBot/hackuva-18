@@ -11,7 +11,6 @@ def optionsMenu():
   print("(2) Remove an information field")
   print("(3) Retrieve all stored information field")
   print("(4) Run Wisper")
-  print("(5) Print all matches")
   print("(X) Quit")
   print("-------------------------------")
   print()
@@ -19,14 +18,13 @@ def optionsMenu():
 def typesMenu():
   print("-------------------------------")
   print("(1) Social Security Number")
-  print("(2) E-Mail")
+  print("(2) Credit Card Number")
   print("-------------------------------")
 
 def main():
   print("Welcome to Wisper!")
   
   personalFields = [[] for i in range(2)]
-  file = open("database.txt", 'w+')
   
   while True:
     optionsMenu()
@@ -40,8 +38,8 @@ def main():
       
       if inputOption == '1' and len(field.replace('-', '').replace(' ', '')) == 9 and field.replace('-', '').replace(' ', '').isnumeric():
         personalFields[0] = personalFields[0] + [field.replace('-', '').replace(' ', '')]
-      elif inputOption == '2' and '@' in field:
-        personalFields[1] = personalFields[1] + [field]
+      elif inputOption == '2' and len(field.replace(' ', '')) == 16 and field.replace(' ', '').isnumeric():
+        personalFields[1] = personalFields[1] + [field.replace(' ', '')]
       else:
         print("Invalid input (either type or field).")
         
@@ -72,25 +70,36 @@ def main():
       except:
           filek.close()
 
-    elif option == '5':
-      print("Printing all matches of personal data...")
       
     elif option == 'X' or option == 'x':
-      print("Exiting program. Thank you for using Wisper!")
+      print("Exiting program. Logs generated; check the logs/matches.txt folder. Thank you for using Wisper!")
       break
     else:
       print("Incorrect option chosen.")
     
     print()
+	
+  scannedInput = open("logs/info_log.txt", "r").read()
+  lines = scannedInput.splitlines()
   
-  for section in range(0, len(personalFields)):
-    for field in range(0, len(personalFields[section])):
-      file.write(personalFields[section][field])
-      if field < len(personalFields[section]) - 1:
-        file.write(" ")
-    if section < len(personalFields) - 1:
-      file.write('\n')
-    
-  file.close()
+  bigString = ""
+  for line in lines:
+    bigString = bigString + line.split(',')[0]
+  
+  finalLog = open("logs/matches.txt", "w")
+  
+  for section in personalFields:
+    for field in section:
+      while field in bigString:
+        if personalFields.index(section) == 0:
+          finalLog.write("A provided SSN was input at " + lines[bigString.find(field)].split(',')[1] + ", at time " + lines[bigString.find(field)].split(',')[2] + '\n')
+          bigString = bigString.replace(field, "", 1)
+        if personalFields.index(section) == 1:
+          finalLog.write("A provided credit card number was input at " + lines[bigString.find(field)].split(',')[1] + ", at time " + lines[bigString.find(field)].split(',')[2] + '\n')
+          bigString = bigString.replace(field, "", 1)
+   
+		  
+  remove = open("logs/info_log.txt", "r+")
+  remove.truncate()
   
 main()
