@@ -7,28 +7,38 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+	<link rel ="stylesheet" href="style.css">
+	
+	
     <title>Project Wisper</title>
   </head>
   
-  <body>
+  <body style ="background:#393939">
+  
 	<div style="background:#b0e0e6" class ="jumbotron text-center">
-		<img src="images/smoke.PNG" alt="test">
-		<h1>Wisper</h1>
-		<p class = "text-muted">A personal security program that alerts you to sensitive personal data input.</p>
+		<img src="images/smoke.PNG" alt="test" class="fadeInUp">
+		<h1 class="fadeInUp one">Wisper</h1>
+		<p class = "text-muted fadeInUp two">A security program that alerts you to sensitive personal data input.</p>
 	</div>
 	
-	<div class = "container">
+	<div style = "background:#534242" class = "container-fluid text-white fadeInRight one" align="right">
+		<h1>Sensitive Input Sentinel</h1>
+		<p>Data breaches have become one of the most concerning and pressing security issues in the realm of computer security. With data breaches becoming a more
+		common occurrence, it can be difficult to remember which sites you've input sensitive information into.</p>
+		<p>Wisper removes the need to memorize such sites by doing that job for you, along with providing helpful
+		information on when you provided such information.</p>
+		<p>Has a site been breached? Utilize Wisper's logs to see if you've ever input personal info into that site, and take appropriate action based on the results!</p>
+	</div>
+	
+	<div style = "background:#534242" class = "container-fluid text-white fadeInRight two">
 		<h1>How it Works</h1>
-		<p>Wisper is a free, open-source technology that keeps track of your keyboard input and cross-checks it with a provided list of "personal information fields."
+		<p>Wisper is a free, open-source program which keeps track of your keyboard input and cross-checks it with a provided list of "personal information fields."
 		In the event that you type out some phrase or number which corresponds with one of these fields, Wisper will log this information for
-		future reference, allowing to see where, what, and when did you type out this information.</p>
-		<p>In the event of a data breach, you can use Wisper to quickly check if you've input personal information at the compromised sites,
-		allowing you to take quick action to protect your identity.</p>
+		future reference, allowing to see what sites and what time did you type out this information.</p>
 		<p>Wisper requires no online connection and encrypts all personal information fields, so your data is kept safe from attacks.</p>
 	</div>
 	
-	<div class = "jumbotron text-center">
+	<div style = "background:#534242" class = "jumbotron text-center">
 		<button type = "button" class = "btn btn-info btn-lg">Download now!</button>
 		<p class = "small text-muted">Your download should begin automatically.</p>
 	</div>
