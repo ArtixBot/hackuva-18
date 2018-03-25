@@ -1,4 +1,4 @@
-import keylog
+import sentinel
 
 def printFields(fieldList):
   for field in fieldList:
@@ -67,7 +67,7 @@ def main():
     elif option == '4':
       print("Wisper started. Press ESC to disable Wisper.")
       try:
-          keylog.start_wisper()
+          sentinel.start_wisper()
       except:
           filek.close()
 
