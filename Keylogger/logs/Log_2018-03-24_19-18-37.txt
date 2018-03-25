@@ -1,0 +1,38 @@
+h,2018/03/24,19:18:26
+<property object at 0x0593AC30>j,2018/03/24,19:18:26
+<property object at 0x0593AC30>k,2018/03/24,19:18:26
+<property object at 0x0593AC30>h,2018/03/24,19:18:26
+<property object at 0x0593AC30>j,2018/03/24,19:18:26
+<property object at 0x0593AC30>k,2018/03/24,19:18:26
+<property object at 0x0593AC30>h,2018/03/24,19:18:26
+<property object at 0x0593AC30>Key.space,2018/03/24,19:18:27
+Key.space,2018/03/24,19:18:27
+Key.space,2018/03/24,19:18:27
+Key.space,2018/03/24,19:18:27
+Key.space,2018/03/24,19:18:28
+Key.space,2018/03/24,19:18:28
+Key.space,2018/03/24,19:18:28
+Key.space,2018/03/24,19:18:30
+Key.space,2018/03/24,19:18:30
+j,2018/03/24,19:18:32
+<property object at 0x0593AC30>j,2018/03/24,19:18:32
+<property object at 0x0593AC30>k,2018/03/24,19:18:33
+<property object at 0x0593AC30>l,2018/03/24,19:18:33
+<property object at 0x0593AC30>j,2018/03/24,19:18:33
+<property object at 0x0593AC30>k,2018/03/24,19:18:33
+<property object at 0x0593AC30>l,2018/03/24,19:18:33
+<property object at 0x0593AC30>j,2018/03/24,19:18:33
+<property object at 0x0593AC30>k,2018/03/24,19:18:33
+<property object at 0x0593AC30>l,2018/03/24,19:18:34
+<property object at 0x0593AC30>j,2018/03/24,19:18:34
+<property object at 0x0593AC30>k,2018/03/24,19:18:34
+<property object at 0x0593AC30>l,2018/03/24,19:18:34
+<property object at 0x0593AC30>j,2018/03/24,19:18:34
+<property object at 0x0593AC30>k,2018/03/24,19:18:34
+<property object at 0x0593AC30>l,2018/03/24,19:18:34
+<property object at 0x0593AC30>j,2018/03/24,19:18:35
+<property object at 0x0593AC30>k,2018/03/24,19:18:35
+<property object at 0x0593AC30>l,2018/03/24,19:18:35
+<property object at 0x0593AC30>Key.space,2018/03/24,19:18:36
+Key.space,2018/03/24,19:18:36
+Key.space,2018/03/24,19:18:37
