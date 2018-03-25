@@ -23,7 +23,6 @@ def typesMenu():
 
 def main():
   print("Welcome to Wisper!")
-  
   personalFields = [[] for i in range(2)]
   
   while True:
