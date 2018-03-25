@@ -11,6 +11,7 @@ def optionsMenu():
   print("(2) Remove an information field")
   print("(3) Retrieve all stored information field")
   print("(4) Run Wisper")
+  print("(5) Help")
   print("(X) Quit")
   print("-------------------------------")
   print()
@@ -22,18 +23,19 @@ def typesMenu():
   print("-------------------------------")
 
 def main():
+  print()
   print("Welcome to Wisper!")
   personalFields = [[] for i in range(2)]
   
   while True:
     optionsMenu()
-    option = input("Enter option:")
+    option = input("Enter option: ")
     
     if option == '1':
       typesMenu()
       
-      inputOption = input("Enter type:")
-      field = input("Enter field:")
+      inputOption = input("Enter type: ")
+      field = input("Enter field: ")
       
       if inputOption == '1' and len(field.replace('-', '').replace(' ', '')) == 9 and field.replace('-', '').replace(' ', '').isnumeric():
         personalFields[0] = personalFields[0] + [field.replace('-', '').replace(' ', '')]
@@ -45,13 +47,13 @@ def main():
     elif option == '2':
       typesMenu()
       
-      inputOption = input("Enter type:")
+      inputOption = input("Enter type: ")
       if inputOption == '1':
         printFields(personalFields[0])
       elif inputOption == '2':
         printFields(personalFields[1])
         
-      indexRemove = input("Enter index of field to remove:")
+      indexRemove = input("Enter index of field to remove: ")
       
       try:
         del personalFields[int(inputOption)-1][int(indexRemove)]
@@ -69,6 +71,15 @@ def main():
       except:
           filek.close()
 
+    elif option == '5':
+      print()
+      print("Instructions:")
+      print("-------------------------------")
+      print("Select option (1) to insert sensitive data fields.")
+      print("Once all sensitive data fields have been input, select option (4) to enable Wisper.")
+      print("While active, Wisper will track user input for any phrases which match these sensitive data fields.")
+      print("Once completed, press Esc to disable Wisper, and type 'x' or 'X' to end the program.")
+      print("Upon end, Wisper generates a .txt file which notifies you of all incidences of sensitive data input.")
       
     elif option == 'X' or option == 'x':
       print("Exiting program. Logs generated; check the logs/matches.txt folder. Thank you for using Wisper!")
